@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="./Survey Form_files/style.css">
+</head>
+<body>
+  <h1>Amity Survey Form</h1>
+  <form id="form">
+    <div class="form-control">
+      <label for="name" id="label-name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name">
+    </div>
+    <div class="form-control">
+      <label for="email" id="label-email">Email</label>
+      <input type="text" id="email" placeholder="Enter your email">
+    </div>
+    <div class="form-control">
+      <label for="age" id="label-age">Age</label>
+      <input type="text" id="age" placeholder="Enter your age">
+    </div>
+    <div class="form-control">
+      <label>Would you recommend Amity to a friend?</label>
+      <label for="recommend-1">
+        <input type="radio" id="recommend-1" name="recommend">Yes
+      </label>
+      <label for="recommend-2">
+        <input type="radio" id="recommend-2" name="recommend">No
+      </label>
+      <label for="recommend-3">
+        <input type="radio" id="recommend-3" name="recommend">Maybe
+      </label>
+    </div>
+    <div class="form-control">
+      <label>Languages and Frameworks known
+        <small>(Check all that apply)</small>
+      </label>
+      <label for="inp-1">
+        <input type="checkbox" name="inp">C
+      </label>
+      <label for="inp-2">
+        <input type="checkbox" name="inp">C++
+      </label>
+      <label for="inp-3">
+        <input type="checkbox" name="inp">C#
+      </label>
+      <label for="inp-4">
+        <input type="checkbox" name="inp">Java
+      </label>
+      <label for="inp-5">
+        <input type="checkbox" name="inp">Python
+      </label>
+      <label for="inp-6">
+        <input type="checkbox" name="inp">JavaScript
+      </label>
+      <label for="inp-7">
+        <input type="checkbox" name="inp">React
+      </label>
+      <label for="inp-8">
+        <input type="checkbox" name="inp">Angular
+      </label>
+      <label for="inp-9">
+        <input type="checkbox" name="inp">Django
+      </label>
+      <label for="inp-10">
+        <input type="checkbox" name="inp">Spring
+      </label>
+    </div>
+    <div class="form-control">
+      <label for="comment">Any comment or suggestion</label>
+      <textarea name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+    </div>
+    <button type="submit" value="submit">Submit</button>
+  </form>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
