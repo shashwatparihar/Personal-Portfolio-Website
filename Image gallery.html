@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5500/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=initial-scale">
+  <title>Image gallery</title>
+  <link rel="stylesheet" href="./Image gallery_files/style.css">
+</head>
+<body>
+  <div class="heading">
+    <h1>Image Gallery</h1>
+  </div>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="./Image gallery_files/Types-of-Wastes-(Banner).webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240311163321/Types-of-Wastes-(Banner).webp&#39;)" alt="Image 1">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/Invertebrates-(Banner).webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240311125007/Invertebrates-(Banner).webp&#39;)" alt="Image 2">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/GBlog-banner.webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240311120816/GBlog-banner.webp&#39;)" alt="Image 3">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/Layers-of-Atmosphere-Banner-02.webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240308123700/Layers-of-Atmosphere-Banner-02.webp&#39;)" alt="Image 4">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/List-of-Rocket-Launching-Stations-in-India---banner.webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240307180031/List-of-Rocket-Launching-Stations-in-India---banner.webp&#39;)" alt="Image 5">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/Russia-Banner-copy-2.webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240215134226/Russia-Banner-copy-2.webp&#39;)" alt="Image 6">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/girl-dog-names-banner.webp" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240226155245/girl-dog-names-banner.webp&#39;)" alt="Image 7">
+    </div>
+    <div class="gallery-item">
+      <img src="./Image gallery_files/Types-of-Microscope-(Banner).png" onclick="openModal(&#39;https://media.geeksforgeeks.org/wp-content/uploads/20240215151423/Types-of-Microscope-(Banner).png&#39;)" alt="Image 8">
+    </div>
+  </div>
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  <script>
+    function openModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("myModal").style.display = "block";
+    }
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
